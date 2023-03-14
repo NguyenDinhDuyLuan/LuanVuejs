@@ -1,0 +1,58 @@
+.card-item {
+  color: #2e2e21;
+  text-align: left;
+  text-decoration: none;
+}
+.card-item .card-img {
+  width: 100%;
+  height: 610px;
+}
+.card-item .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-item .title{
+    width: 68%;
+    margin: 30px 0px 14px 0px;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: initial;
+}
+.card-item .info{
+    font-size: 18x;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+    white-space: pre-wrap;
+}
+.card-item .button{
+    font-size: 24px;
+    color: #2e2e21;
+    font-family: 'Mulish', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #313131;
+    background-color: #C34795;
+    border: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: 18px 30px;
+    border-radius: 5px;
+    font-family: 'Mulish', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.card-item p{
+    pointer-events: none;
+    cursor: default;
+}
+
+.classCardYellow{
+  background-color: rgb(203, 230, 85);
+}
+.classCardBlue{
+  background-color: rgb(27, 165, 199);
+}

@@ -1,0 +1,33 @@
+@import './base.css';
+
+.container{
+    max-width: 1440px;
+    margin: auto;
+}
+
+.card-gallery{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 32px;
+    margin-top: 12px;
+}
+
+@media screen and (max-width:1024px) {
+    .card-gallery{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 24px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .card-gallery{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 24px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .card-gallery{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
