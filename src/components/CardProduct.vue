@@ -15,28 +15,33 @@ export default {
     linkCard: {
       type: String,
     },
-    // classCardRed: {
-    //   type: Boolean,
-    //   default: false,
-    // },
-    // classCardBlue: {
-    //   type: Boolean,
-    //   default: false,
-    // },
-    isActive:{
+    classCardRed: {
       type: Boolean,
       default: false,
-    }
+    },
+    classCardBlue: {
+      type: Boolean,
+      default: false,
+    },
+    isActive: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
     return {
       // urlCard: image,
+      // productsInfo: {
+      // urlCard: 'How to do lists in Vue',
+      // titleCard: 'Jane Doe',
+      // infoCard: '2016-04-10'
+      // },
       styleObject: {
         color: "red",
         fontSize: "13px",
       },
-      
+
       // titleCard: "hellli ",
     };
   },
@@ -44,12 +49,16 @@ export default {
 </script>
 
 <template>
-  <a :class="[isActive ? 'classCardYellow' : 'classCardBlue']" class="card-item" href="#">
+  <a
+    :class="[isActive ? 'classCardYellow' : 'classCardBlue']"
+    class="card-item"
+    href="#"
+  >
     <div class="card-img">
       <img :src="urlCard" />
     </div>
     <p class="title" :style="styleObject">
-      {{ titleCard }} 
+      {{ titleCard }}
     </p>
     <p class="info">
       {{ infoCard }}

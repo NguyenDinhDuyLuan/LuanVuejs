@@ -50,9 +50,9 @@
     cursor: default;
 }
 
-.classCardYellow{
+.card-item.classCardYellow{
   background-color: rgb(203, 230, 85);
 }
-.classCardBlue{
+.card-item.classCardBlue{
   background-color: rgb(27, 165, 199);
 }
