@@ -46,9 +46,9 @@
             ></FlagCountry>
             <p v-if="item.flagActive === true">Toi yeu VN</p>
             <p v-show="item.flagActive === true">Toi yeu VN</p>
-            <div v-if="item.nameFlag === 'Viet Nam'"><img src="./assets/img/vnHat.jpg"></div>
-            <div v-else-if="item.nameFlag === 'Japan'"><img src="./assets/img/fujiMout.jpg"></div>
-            <div v-else-if="item.nameFlag === 'America'"><img src="./assets/img/dollarSign.jpg"></div>
+            <div v-if="item.nameFlag === 'Viet Nam'"><img class="country-specialty" src="./assets/img/vnHat.jpg"></div>
+            <div v-else-if="item.nameFlag === 'Japan'"><img class="country-specialty" src="./assets/img/fujiMout.jpg"></div>
+            <div v-else-if="item.nameFlag === 'America'"><img class="country-specialty" src="./assets/img/dollarSign.jpg"></div>
             <div v-else>German</div>
           </div>
         </div>

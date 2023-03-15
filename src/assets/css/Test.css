@@ -12,6 +12,14 @@
     margin-top: 12px;
 }
 
+.country-specialty{
+  width: 215px;
+  height: 215px;
+  object-fit: cover;
+  border: 2px solid;
+  border-color: blue;
+}
+
 @media screen and (max-width:1024px) {
     .card-gallery{
         grid-template-columns: repeat(3, minmax(0, 1fr));
