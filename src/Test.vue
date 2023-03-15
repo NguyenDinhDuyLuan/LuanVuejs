@@ -44,6 +44,12 @@
               :nameFlag="item.nameFlag"
               :telephoneFlag="item.telephoneNum"
             ></FlagCountry>
+            <p v-if="item.flagActive === true">Toi yeu VN</p>
+            <p v-show="item.flagActive === true">Toi yeu VN</p>
+            <div v-if="item.nameFlag === 'Viet Nam'"><img src="./assets/img/vnHat.jpg"></div>
+            <div v-else-if="item.nameFlag === 'Japan'"><img src="./assets/img/fujiMout.jpg"></div>
+            <div v-else-if="item.nameFlag === 'America'"><img src="./assets/img/dollarSign.jpg"></div>
+            <div v-else>German</div>
           </div>
         </div>
       </div>
@@ -102,19 +108,19 @@ export default {
         },
         {
           flagActive: false,
-          urlFlag: JapanImage,
+          urlFlag: VietnamImage,
           nameFlag: "Viet Nam",
           telephoneNum: "+84",
         },
         {
           flagActive: true,
-          urlFlag: AmericaImage,
+          urlFlag: JapanImage,
           nameFlag: "Japan",
           telephoneNum: "+52",
         },
         {
           flagActive: false,
-          urlFlag: VietnamImage,
+          urlFlag: AmericaImage,
           nameFlag: "America",
           telephoneNum: "+14",
         },
