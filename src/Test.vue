@@ -39,6 +39,7 @@
         <div class="flag-list">
           <div class="col-3" v-for="item in dataFlagCountry">
             <FlagCountry
+              :flagActive="item.flagActive"
               :urlFlag="item.urlFlag"
               :nameFlag="item.nameFlag"
               :telephoneFlag="item.telephoneNum"
@@ -94,21 +95,25 @@ export default {
       ],
       dataFlagCountry: [
         {
+          flagActive: true,
           urlFlag: GermanImage,
           nameFlag: "German",
           telephoneNum: "+241",
         },
         {
+          flagActive: false,
           urlFlag: JapanImage,
           nameFlag: "Viet Nam",
           telephoneNum: "+84",
         },
         {
+          flagActive: true,
           urlFlag: AmericaImage,
           nameFlag: "Japan",
           telephoneNum: "+52",
         },
         {
+          flagActive: false,
           urlFlag: VietnamImage,
           nameFlag: "America",
           telephoneNum: "+14",
@@ -117,13 +122,13 @@ export default {
       urlCard1: Image1,
       urlCard2: Image2,
       // này hơi thừa nha em , với component chưa có css á ,ok , report đi e mai làm tiếp
-      
+
       // urlFlag1: GermanImage,
       // urlFlag2: JapanImage,
       // urlFlag3: AmericaImage,
       // urlFlag4: VietnamImage,
     };
   },
-  components: { CardProduct, FlagCountry},
+  components: { CardProduct, FlagCountry },
 };
 </script>

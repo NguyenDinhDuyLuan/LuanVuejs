@@ -1,5 +1,4 @@
 <script>
-
 export default {
   props: {
     urlFlag: {
@@ -10,23 +9,30 @@ export default {
     },
     telephoneFlag: {
       type: String,
+    },
+    flagActive:{
+      type: Boolean,
+      defaul: false,
     }
   },
 
   data() {
-    return {
-    };
+    return {};
   },
 };
 </script>
 
 <template>
-  <div class="country-flag">
+  <div :class="[flagActive ? 'flagBorderGreen' : 'flagBorderRed']" class="country-flag">
     <div class="flag-img">
       <img :src="urlFlag" />
     </div>
-    <p class="flag-name">{{nameFlag}}</p>
-    <p class="flag-tel">({{telephoneFlag}})</p>
+    <div class="flag-name">
+      <span>{{ nameFlag }}</span>
+    </div>
+    <div class="flag-tel">
+      <span>({{ telephoneFlag }})</span>
+    </div>
   </div>
 </template>
 
