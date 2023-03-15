@@ -1,0 +1,18 @@
+.country-flag{
+    display: flex;
+}
+
+.flag-img img{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+}
+
+.flag-img{
+    margin: 0 10px;
+}
+
+.flag-tel{
+    margin-left: 5px;
+}

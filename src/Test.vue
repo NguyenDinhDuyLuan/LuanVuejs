@@ -116,10 +116,12 @@ export default {
       ],
       urlCard1: Image1,
       urlCard2: Image2,
-      urlFlag1: GermanImage,
-      urlFlag2: JapanImage,
-      urlFlag3: AmericaImage,
-      urlFlag4: VietnamImage,
+      // này hơi thừa nha em , với component chưa có css á ,ok , report đi e mai làm tiếp
+      
+      // urlFlag1: GermanImage,
+      // urlFlag2: JapanImage,
+      // urlFlag3: AmericaImage,
+      // urlFlag4: VietnamImage,
     };
   },
   components: { CardProduct, FlagCountry},

@@ -26,7 +26,7 @@ export default {
       <img :src="urlFlag" />
     </div>
     <p class="flag-name">{{nameFlag}}</p>
-    <p class="flag-tel">{{telephoneFlag}}</p>
+    <p class="flag-tel">({{telephoneFlag}})</p>
   </div>
 </template>
 
