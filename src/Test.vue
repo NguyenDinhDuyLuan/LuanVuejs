@@ -46,10 +46,31 @@
             ></FlagCountry>
             <p v-if="item.flagActive === true">Toi yeu VN</p>
             <p v-show="item.flagActive === true">Toi yeu VN</p>
-            <div v-if="item.nameFlag === 'Viet Nam'"><img class="country-specialty" src="./assets/img/vnHat.jpg"></div>
-            <div v-else-if="item.nameFlag === 'Japan'"><img class="country-specialty" src="./assets/img/fujiMout.jpg"></div>
-            <div v-else-if="item.nameFlag === 'America'"><img class="country-specialty" src="./assets/img/dollarSign.jpg"></div>
+            <div v-if="item.nameFlag === 'Viet Nam'">
+              <img class="country-specialty" src="./assets/img/vnHat.jpg" />
+            </div>
+            <div v-else-if="item.nameFlag === 'Japan'">
+              <img class="country-specialty" src="./assets/img/fujiMout.jpg" />
+            </div>
+            <div v-else-if="item.nameFlag === 'America'">
+              <img
+                class="country-specialty"
+                src="./assets/img/dollarSign.jpg"
+              />
+            </div>
             <div v-else>German</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-product-list">
+        <div class="container">
+          <div class="product-list" v-for="item in dataProductItem">
+            <ProductOrder
+              :urlProduct="item.urlProduct"
+              :nameProduct="item.nameProduct"
+              :infoProduct="item.infoProduct"
+              :pricesProduct="item.pricesProduct"
+            />
           </div>
         </div>
       </div>
@@ -66,6 +87,8 @@ import AmericaImage from "./assets/img/america-flag.png";
 import VietnamImage from "./assets/img/vietnam-flag.png";
 import CardProduct from "./components/CardProduct.vue";
 import FlagCountry from "./components/FlagCountry.vue";
+import ProductOrder from "./components/ProductOrder.vue";
+import ProductCoffe from "./assets/img/coffe.jpg";
 export default {
   data() {
     return {
@@ -125,6 +148,15 @@ export default {
           telephoneNum: "+14",
         },
       ],
+      dataProductItem: [
+        {
+          urlProduct: ProductCoffe,
+          nameProduct: "Pinot Noir",
+          infoProduct:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+          pricesProduct: "16.95",
+        },
+      ],
       urlCard1: Image1,
       urlCard2: Image2,
       // này hơi thừa nha em , với component chưa có css á ,ok , report đi e mai làm tiếp
@@ -135,6 +167,6 @@ export default {
       // urlFlag4: VietnamImage,
     };
   },
-  components: { CardProduct, FlagCountry },
+  components: { CardProduct, FlagCountry, ProductOrder },
 };
 </script>

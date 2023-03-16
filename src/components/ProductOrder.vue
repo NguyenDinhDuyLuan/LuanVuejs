@@ -1,0 +1,61 @@
+<script>
+export default {
+  props: {
+    urlProduct: {
+      type: String,
+    },
+    nameProduct: {
+      type: String,
+    },
+    infoProduct: {
+      type: String,
+    },
+    pricesProduct: {
+      type: String,
+    },
+    amoutProduct: {
+      type: String,
+    },
+  },
+
+  data() {
+    return {
+        count: 0,
+    };
+  },
+};
+</script>
+
+<template>
+  <div class="product-items">
+    <div class="option-menu">
+        <button class="back-btn">
+            <img src="../assets/img/left-arrow.svg">
+        </button>
+        <button class="option-btn">
+            <img src="../assets/img/menu.png"/>
+        </button>
+    </div>
+    <div class="product-img">
+      <img :src="urlProduct" />
+    </div>
+    <div class="product-name">
+      <p>{{ nameProduct }}</p>
+    </div>
+    <div class="product-info">
+      <p>{{ infoProduct }}</p>
+    </div>
+    <div class="product-order">
+      <div class="product-prices">${{ pricesProduct }}</div>
+      <div class="product-amount">
+        <button class="amount-minus" @click="count--">-</button>
+        <p class="amount-num">{{ count }}</p>
+        <button class="amount-plus" @click="count++">+</button>
+    </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+@import url("../assets/css/ProductOrder.css");
+</style>

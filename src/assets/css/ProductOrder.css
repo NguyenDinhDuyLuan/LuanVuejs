@@ -1,0 +1,90 @@
+.product-items{
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    color: black;
+    font-family: "Basic Sans Light SF", sans-serif;
+}
+
+.product-items p {
+    margin-bottom: 0;
+}
+
+.product-img img{
+    width: 100%;
+    height: 313px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.product-name{
+    line-height: 62px;
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.product-info{
+    margin-bottom: 42px;
+}
+
+.product-order{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-order .product-prices{
+    line-height: 62px;
+    font-weight: bold;
+    font-size: 28px;
+    width: 100%;
+}
+.product-order .product-amount{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F6F6;
+    border-radius: 60px;
+    padding: 5px;
+}
+
+.product-order .amount-minus, .amount-plus{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.product-order .amount-minus{
+    background-color: #F6F6F6;
+}
+
+.product-order .amount-num{
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.product-order .amount-plus{
+    background-color: white;
+}
+
+.product-items .option-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 27px;
+}
+.option-menu .back-btn, .option-btn{
+    width: 32px;
+    border: 0;
+    background-color: white;
+}
+.back-btn img{
+    width: 100%;
+}
+.option-btn img{
+    width: 100%;
+}
