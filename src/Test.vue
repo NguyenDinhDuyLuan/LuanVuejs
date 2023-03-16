@@ -64,13 +64,15 @@
       </div>
       <div class="section-product-list">
         <div class="container">
-          <div class="product-list" v-for="item in dataProductItem">
-            <ProductOrder
-              :urlProduct="item.urlProduct"
-              :nameProduct="item.nameProduct"
-              :infoProduct="item.infoProduct"
-              :pricesProduct="item.pricesProduct"
-            />
+          <div class="product-list">
+            <div v-for="item in dataProductItem">
+              <ProductOrder
+                :urlProduct="item.urlProduct"
+                :nameProduct="item.nameProduct"
+                :infoProduct="item.infoProduct"
+                :pricesProduct="item.pricesProduct"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -155,6 +157,34 @@ export default {
           infoProduct:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
           pricesProduct: "16.95",
+        },
+        {
+          urlProduct: ProductCoffe,
+          nameProduct: "Product 2",
+          infoProduct:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+          pricesProduct: "17.95",
+        },
+        {
+          urlProduct: ProductCoffe,
+          nameProduct: "Product 3",
+          infoProduct:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+          pricesProduct: "18.95",
+        },
+        {
+          urlProduct: ProductCoffe,
+          nameProduct: "Product 4",
+          infoProduct:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+          pricesProduct: "19.95",
+        },
+        {
+          urlProduct: ProductCoffe,
+          nameProduct: "Product 5",
+          infoProduct:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+          pricesProduct: "20.95",
         },
       ],
       urlCard1: Image1,

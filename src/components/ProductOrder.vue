@@ -36,9 +36,14 @@ export default {
 </script>
 
 <template>
-  <div class="product-items">
+  <div class="product-items" id="productItems">
     <div class="option-menu">
-      <button class="back-btn" @click="(event) => warn('Bạn có thực sự muốn quay trở về không?', event)">
+      <button
+        class="back-btn"
+        @click="
+          (event) => warn('Bạn có thực sự muốn quay trở về không?', event)
+        "
+      >
         <img src="../assets/img/left-arrow.svg" />
       </button>
       <button class="option-btn">

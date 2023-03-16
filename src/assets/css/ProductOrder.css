@@ -6,6 +6,10 @@
     font-family: "Basic Sans Light SF", sans-serif;
 }
 
+.product-hidden{
+    display: none;
+}
+
 .product-items p {
     margin-bottom: 0;
 }
