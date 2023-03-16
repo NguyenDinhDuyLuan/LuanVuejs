@@ -20,8 +20,17 @@ export default {
 
   data() {
     return {
-        count: 0,
+      count: 0,
     };
+  },
+  methods: {
+    warn(message, event) {
+      // now we have access to the native event
+      if (event) {
+        event.preventDefault();
+      }
+      alert(message);
+    },
   },
 };
 </script>
@@ -29,12 +38,12 @@ export default {
 <template>
   <div class="product-items">
     <div class="option-menu">
-        <button class="back-btn">
-            <img src="../assets/img/left-arrow.svg">
-        </button>
-        <button class="option-btn">
-            <img src="../assets/img/menu.png"/>
-        </button>
+      <button class="back-btn" @click="(event) => warn('Bạn có thực sự muốn quay trở về không?', event)">
+        <img src="../assets/img/left-arrow.svg" />
+      </button>
+      <button class="option-btn">
+        <img src="../assets/img/menu.png" />
+      </button>
     </div>
     <div class="product-img">
       <img :src="urlProduct" />
@@ -51,7 +60,7 @@ export default {
         <button class="amount-minus" @click="count--">-</button>
         <p class="amount-num">{{ count }}</p>
         <button class="amount-plus" @click="count++">+</button>
-    </div>
+      </div>
     </div>
   </div>
 </template>
