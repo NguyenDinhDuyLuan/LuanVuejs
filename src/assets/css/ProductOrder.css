@@ -21,6 +21,30 @@
     border-radius: 20px;
 }
 
+.product-img {
+    position: relative;
+}
+
+.outOfOrder{
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; 
+    backdrop-filter: blur(9px);
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.outOfOrder .orderAlert{
+    z-index: 2;
+    color: white;
+    font-size: 32px;
+}
+
 .product-name{
     line-height: 62px;
     font-weight: 900;

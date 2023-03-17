@@ -13,14 +13,14 @@ export default {
     pricesProduct: {
       type: String,
     },
-    amoutProduct: {
-      type: String,
-    },
+    // amoutProduct: {
+    //   type: String,
+    // },
   },
 
   data() {
     return {
-      count: 0,
+      count: 1,
     };
   },
   methods: {
@@ -52,6 +52,9 @@ export default {
     </div>
     <div class="product-img">
       <img :src="urlProduct" />
+      <div class="outOfOrder" v-if="count === 0">
+        <div class="orderAlert">Hết hàng</div>
+      </div>
     </div>
     <div class="product-name">
       <p>{{ nameProduct }}</p>

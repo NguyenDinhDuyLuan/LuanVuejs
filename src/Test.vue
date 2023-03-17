@@ -65,7 +65,7 @@
       <div class="section-product-list">
         <div class="container">
           <div class="product-list">
-            <div v-for="item in dataProductItem">
+            <div v-for="item in dataProductItem" v-show="showProduct">
               <ProductOrder
                 :urlProduct="item.urlProduct"
                 :nameProduct="item.nameProduct"
@@ -74,6 +74,8 @@
               />
             </div>
           </div>
+          <button class="hide-btn" @click="showProduct = !showProduct">Hide/show</button>
+          <!-- {{ showProduct }} -->
         </div>
       </div>
     </div>
@@ -189,6 +191,7 @@ export default {
       ],
       urlCard1: Image1,
       urlCard2: Image2,
+      showProduct: true,
       // này hơi thừa nha em , với component chưa có css á ,ok , report đi e mai làm tiếp
 
       // urlFlag1: GermanImage,

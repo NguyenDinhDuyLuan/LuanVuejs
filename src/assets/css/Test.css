@@ -20,6 +20,25 @@
   border-color: blue;
 }
 
+.hide-btn{
+    display: flex;
+    margin: auto;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 60px;
+    background-color: orange;
+}
+
+.hide-btn:hover{
+    border: 2px solid;
+    background-color: white;
+    border-color: orange;
+    color: orange;
+    transition: 0.4s ease-in-out;
+}
+
 .section-product-list{
     padding: 40px 0;
     background-color: #D9D9D9;
