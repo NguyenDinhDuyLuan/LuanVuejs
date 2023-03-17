@@ -65,16 +65,63 @@
       <div class="section-product-list">
         <div class="container">
           <div class="product-list">
-            <div v-for="item in dataProductItem" v-show="showProduct">
-              <ProductOrder
-                :urlProduct="item.urlProduct"
-                :nameProduct="item.nameProduct"
-                :infoProduct="item.infoProduct"
-                :pricesProduct="item.pricesProduct"
-              />
+            <div v-for="item in dataProductItem">
+              <Transition>
+                <div v-if="showProduct">
+                  <ProductOrder
+                    :urlProduct="item.urlProduct"
+                    :nameProduct="item.nameProduct"
+                    :infoProduct="item.infoProduct"
+                    :pricesProduct="item.pricesProduct"
+                  />
+                </div>
+              </Transition>
             </div>
           </div>
-          <button class="hide-btn" @click="showProduct = !showProduct">Hide/show</button>
+          <button class="hide-btn" @click="showProduct = !showProduct">
+            Hide/show
+          </button>
+          <!-- {{ showProduct }} -->
+        </div>
+      </div>
+      <div class="section-product-list">
+        <div class="container">
+          <Transition name="bounce" mode="out-in">
+            <div class="product-list">
+              <ProductOrder
+                :is="activeComponent"
+                urlProduct="/src/assets/img/coffe-2.jpg"
+                nameProduct="TranstionTest1"
+                infoProduct="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. "
+                pricesProduct="14.00"
+              />
+            </div>
+          </Transition>
+          <button
+            class="hide-btn"
+            @click="activeComponent"
+            value="ProductOrder"
+          >
+            Component A
+          </button>
+          <button class="hide-btn" @click="activeComponent" value="FlagCountry">
+            Component B
+          </button>
+          <Transition name="fade" mode="out-in">
+            <component :is="activeComponent"></component>
+          </Transition>
+          <label>
+            <input
+              type="radio"
+              v-model="activeComponent"
+              value="ProductOrder"
+            />
+            A
+          </label>
+          <label>
+            <input type="radio" v-model="activeComponent" value="FlagCountry" />
+            B
+          </label>
           <!-- {{ showProduct }} -->
         </div>
       </div>
@@ -192,6 +239,8 @@ export default {
       urlCard1: Image1,
       urlCard2: Image2,
       showProduct: true,
+      showProduct2: true,
+      activeComponent: "ProductOrder",
       // này hơi thừa nha em , với component chưa có css á ,ok , report đi e mai làm tiếp
 
       // urlFlag1: GermanImage,
