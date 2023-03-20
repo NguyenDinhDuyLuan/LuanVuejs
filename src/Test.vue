@@ -84,7 +84,7 @@
           <!-- {{ showProduct }} -->
         </div>
       </div>
-      <div class="section-product-list">
+      <!-- <div class="section-product-list">
         <div class="container">
           <Transition name="bounce" mode="out-in">
             <div class="product-list">
@@ -121,8 +121,15 @@
           <label>
             <input type="radio" v-model="activeComponent" value="FlagCountry" />
             B
-          </label>
-          <!-- {{ showProduct }} -->
+          </label> 
+          {{ showProduct }} 
+        </div>
+      </div> -->
+      <div class="section-add-form">
+        <div class="container">
+          <div class="form-wrap">
+            <ProductForm />
+          </div>
         </div>
       </div>
     </div>
@@ -136,10 +143,13 @@ import GermanImage from "../src/assets/img/german-flag.png";
 import JapanImage from "./assets/img/japan-flag.png";
 import AmericaImage from "./assets/img/america-flag.png";
 import VietnamImage from "./assets/img/vietnam-flag.png";
+import ProductCoffe from "./assets/img/coffe.jpg";
+
 import CardProduct from "./components/CardProduct.vue";
 import FlagCountry from "./components/FlagCountry.vue";
 import ProductOrder from "./components/ProductOrder.vue";
-import ProductCoffe from "./assets/img/coffe.jpg";
+import ProductForm from "./components/ProductForm.vue";
+
 export default {
   data() {
     return {
@@ -249,6 +259,6 @@ export default {
       // urlFlag4: VietnamImage,
     };
   },
-  components: { CardProduct, FlagCountry, ProductOrder },
+  components: { CardProduct, FlagCountry, ProductOrder, ProductForm },
 };
 </script>
