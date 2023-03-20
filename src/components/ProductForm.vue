@@ -3,6 +3,7 @@ export default {
   data() {
     return {
       productName: '',
+      productAmount: 0,
       codeProduct: "",
       typeProduct: "S2",
       colorProduct: [],
@@ -22,6 +23,16 @@ export default {
       name="fname"
       placeholder="Default input"
       v-model="productName"
+    /><br />
+    <label class="product-amount" for="amount">Product Amount:</label><br />
+    <input
+      class="name-input"
+      type="number"
+      id="amount"
+      name="Amount"
+      placeholder="Default Amount"
+      v-model="productAmount"
+      :min="0"
     /><br />
     <div class="dropdown-wrapper">
       <label>Code product:</label>
@@ -102,7 +113,7 @@ export default {
   </form>
   <div class="form-result">
     <h3>Products in stock that have just been added are:</h3>
-    <p>{{ productName }} : {{ codeProduct }}, {{ typeProduct }}, {{ colorProduct }}</p>
+    <p>{{ productName }} : {{ productAmount }}, {{ codeProduct }}, {{ typeProduct }}, {{ colorProduct }}</p>
   </div>
 </template>
 
