@@ -5,7 +5,8 @@ export default {
       productName: '',
       codeProduct: "",
       typeProduct: "S2",
-      colorProduct: []
+      colorProduct: [],
+      dataCheckbox: ["Code sản phẩm 1", "Code sản phẩm 2", "Code sản phẩm 3"],
     };
   },
 };
@@ -27,9 +28,7 @@ export default {
       <br />
       <select v-model="codeProduct" class="code-selector">
         <option disabled value="">Default Select</option>
-        <option>Code sản phẩm 1</option>
-        <option>Code sản phẩm 2</option>
-        <option>Code sản phẩm 3</option>
+        <option v-for="option in dataCheckbox" :value="option">{{option}}</option>
       </select>
     </div>
     <label>Type product</label>
