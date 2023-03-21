@@ -20,15 +20,21 @@ export default {
     </a>
     <nav class="navbar-menu">
       <ul class="navbar-menu-control">
-        <li><a href="#">About us</a></li>
-        <li><a href="#">How it works</a></li>
+        <li>
+            <router-link :to="{ name : 'homepage'}"> home</router-link> 
+            <!--  có vẻ nó chưa hiểu  -->
+           
+            
+        </li>
+        <!-- trong vue định tuyến <router-link> thay cho thẻ a nha  to= " ở trong này là đường dẫn link " -->
+        <!-- <li><a href="#">How it works</a></li>
         <li><a href="#">Explore</a>
             <ul class="dropdown">
                 <li><a href="#">Explore 1</a></li>
                 <li><a href="#">Explore 2</a></li>
             </ul>
         </li>
-        <li><a href="#">Impact</a></li>
+        <li><a href="#">Impact</a></li> -->
       </ul>
     </nav>
     <div class="navbar-user">

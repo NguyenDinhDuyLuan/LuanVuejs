@@ -58,7 +58,7 @@
     margin: 0 20px;
 }
 
-.main-navbar .navbar-menu .navbar-menu-control .dropdown:hover {
+.main-navbar .navbar-menu .navbar-menu-control .dropdown:hover, ul li:hover{
   opacity: 1;
 }
 
