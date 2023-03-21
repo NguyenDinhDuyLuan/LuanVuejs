@@ -1,0 +1,116 @@
+.main-navbar{
+    width: 100%;
+    background-color: white;
+    padding: 22px 76px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-navbar a{
+    text-decoration: none;
+    color: #3E3E3E;
+    cursor: pointer;
+}
+
+.main-navbar .navbar-logo img{
+    width: auto;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.main-navbar .navbar-logo h4{
+    margin: auto 0;
+}
+
+.main-navbar .navbar-logo{
+    display: flex;
+}
+
+.main-navbar .navbar-menu{
+    margin: auto;
+}
+
+.main-navbar .navbar-menu .navbar-menu-control{
+    padding-left: 0;
+    display: flex;
+    margin: auto;
+    list-style-type: none;
+}
+
+.main-navbar .navbar-menu .navbar-menu-control .dropdown{
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 30px;
+  width: 150px;
+  left: 0;
+  top: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-navbar .navbar-menu .navbar-menu-control .dropdown li:last-child{
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+.main-navbar .navbar-menu .navbar-menu-control li{
+    margin: 0 20px;
+}
+
+.main-navbar .navbar-menu .navbar-menu-control .dropdown:hover {
+  opacity: 1;
+}
+
+.main-navbar .navbar-menu .navbar-menu-control li a{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.main-navbar .navbar-menu .navbar-menu-control li:first-child{
+    margin: 0 20px 0 0;
+}
+
+.main-navbar .navbar-menu .navbar-menu-control li:last-child{
+    margin: 0 0 0 20px;
+}
+
+.main-navbar .navbar-user{
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-navbar .navbar-user .user-cart img{
+    width: 24px;
+    height: auto;
+}
+
+.main-navbar .navbar-user .user-cart{
+    position: relative;
+}
+
+.main-navbar .navbar-user .user-cart::after{
+    content: "12";
+    font-size: 9px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    background-color: #4EBA5D;
+    border-radius: 60px;
+    width: 20px;
+    height: 14px;
+    top: -4px;
+    right: -12px;
+    z-index: 1;
+}
+
+.main-navbar .navbar-user .user-avatar img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 12px;
+}

@@ -5,6 +5,11 @@
     margin: auto;
 }
 
+.navbar-wrapper{
+  background-color: #D9E8E5;
+  padding: 35px 30px;
+}
+
 .card-gallery{
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));

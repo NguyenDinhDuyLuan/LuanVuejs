@@ -4,9 +4,14 @@
   </header>
 
   <main>
+    <div class="section-navbar">
+      <div class="navbar-wrapper">
+        <Navbar />
+      </div>
+    </div>
     <div class="section-product">
       <div class="container">
-        <div class="card-gallery">
+        <!-- <div class="card-gallery">
           <CardProduct
             :is-active="true"
             :url-card="urlCard1"
@@ -21,11 +26,11 @@
             link-card="Read"
             info-card="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores libero molestias sed nobis, necessitatibus incidunt quo ex inventore aut iste pariatur recusandae atque. Beatae nisi doloremque assumenda praesentium deleniti quod magni omnis, commodi quis expedita qui consectetur atque amet, porro deserunt facere dolore blanditiis consequuntur. Ipsa perferendis mollitia dolorem quidem?"
           ></CardProduct>
-        </div>
+        </div> -->
         <!-- render list ở đây chứ em 
           kkk ý chị là render lít component á 
          -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-4" v-for="item in dataCardProduct">
             <CardProduct
               :isActive="item.isActive"
@@ -60,9 +65,9 @@
             </div>
             <div v-else>German</div>
           </div>
-        </div>
+        </div> -->
       </div>
-      <div class="section-product-list">
+      <!-- <div class="section-product-list">
         <div class="container">
           <div class="product-list">
             <div v-for="item in dataProductItem">
@@ -81,9 +86,9 @@
           <button class="hide-btn" @click="showProduct = !showProduct">
             Hide/show
           </button>
-          <!-- {{ showProduct }} -->
+          {{ showProduct }}
         </div>
-      </div>
+      </div> -->
       <!-- <div class="section-product-list">
         <div class="container">
           <Transition name="bounce" mode="out-in">
@@ -125,140 +130,140 @@
           {{ showProduct }} 
         </div>
       </div> -->
-      <div class="section-add-form">
+      <!-- <div class="section-add-form">
         <div class="container">
           <div class="form-wrap">
             <ProductForm />
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </main>
 </template>
 
 <script>
-import Image1 from "./assets/img/logo.svg";
-import Image2 from "./assets/img/card-image.jpg";
-import GermanImage from "../src/assets/img/german-flag.png";
-import JapanImage from "./assets/img/japan-flag.png";
-import AmericaImage from "./assets/img/america-flag.png";
-import VietnamImage from "./assets/img/vietnam-flag.png";
-import ProductCoffe from "./assets/img/coffe.jpg";
+// import Image1 from "./assets/img/logo.svg";
+// import Image2 from "./assets/img/card-image.jpg";
+// import GermanImage from "../src/assets/img/german-flag.png";
+// import JapanImage from "./assets/img/japan-flag.png";
+// import AmericaImage from "./assets/img/america-flag.png";
+// import VietnamImage from "./assets/img/vietnam-flag.png";
+// import ProductCoffe from "./assets/img/coffe.jpg";
 
-import CardProduct from "./components/CardProduct.vue";
-import FlagCountry from "./components/FlagCountry.vue";
-import ProductOrder from "./components/ProductOrder.vue";
+// import CardProduct from "./components/CardProduct.vue";
+// import FlagCountry from "./components/FlagCountry.vue";
+// import ProductOrder from "./components/ProductOrder.vue";
 import ProductForm from "./components/ProductForm.vue";
+import Navbar from "./components/navbar.vue";
 
 export default {
   data() {
     return {
-      dataCardProduct: [
-        {
-          isActive: true,
-          urlCard: Image2,
-          titleCard: " title card product ",
-          linkCard: " link card ",
-          infoCard: " infor card ",
-        },
-        {
-          isActive: false,
-          urlCard: Image1,
-          titleCard: " title card product ",
-          linkCard: " link card ",
-          infoCard: " infor card ",
-        },
-        {
-          isActive: true,
-          urlCard: Image1,
-          titleCard: " title card product ",
-          linkCard: " link card ",
-          infoCard: " infor card ",
-        },
-        {
-          isActive: true,
-          urlCard: Image2,
-          titleCard: " title card product ",
-          linkCard: " link card ",
-          infoCard: " infor card ",
-        },
-      ],
-      dataFlagCountry: [
-        {
-          flagActive: true,
-          urlFlag: GermanImage,
-          nameFlag: "German",
-          telephoneNum: "+241",
-        },
-        {
-          flagActive: false,
-          urlFlag: VietnamImage,
-          nameFlag: "Viet Nam",
-          telephoneNum: "+84",
-        },
-        {
-          flagActive: true,
-          urlFlag: JapanImage,
-          nameFlag: "Japan",
-          telephoneNum: "+52",
-        },
-        {
-          flagActive: false,
-          urlFlag: AmericaImage,
-          nameFlag: "America",
-          telephoneNum: "+14",
-        },
-      ],
-      dataProductItem: [
-        {
-          urlProduct: ProductCoffe,
-          nameProduct: "Pinot Noir",
-          infoProduct:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
-          pricesProduct: "16.95",
-        },
-        {
-          urlProduct: ProductCoffe,
-          nameProduct: "Product 2",
-          infoProduct:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
-          pricesProduct: "17.95",
-        },
-        {
-          urlProduct: ProductCoffe,
-          nameProduct: "Product 3",
-          infoProduct:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
-          pricesProduct: "18.95",
-        },
-        {
-          urlProduct: ProductCoffe,
-          nameProduct: "Product 4",
-          infoProduct:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
-          pricesProduct: "19.95",
-        },
-        {
-          urlProduct: ProductCoffe,
-          nameProduct: "Product 5",
-          infoProduct:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
-          pricesProduct: "20.95",
-        },
-      ],
-      urlCard1: Image1,
-      urlCard2: Image2,
-      showProduct: true,
-      showProduct2: true,
-      activeComponent: "ProductOrder",
+      // dataCardProduct: [
+      //   {
+      //     isActive: true,
+      //     urlCard: Image2,
+      //     titleCard: " title card product ",
+      //     linkCard: " link card ",
+      //     infoCard: " infor card ",
+      //   },
+      //   {
+      //     isActive: false,
+      //     urlCard: Image1,
+      //     titleCard: " title card product ",
+      //     linkCard: " link card ",
+      //     infoCard: " infor card ",
+      //   },
+      //   {
+      //     isActive: true,
+      //     urlCard: Image1,
+      //     titleCard: " title card product ",
+      //     linkCard: " link card ",
+      //     infoCard: " infor card ",
+      //   },
+      //   {
+      //     isActive: true,
+      //     urlCard: Image2,
+      //     titleCard: " title card product ",
+      //     linkCard: " link card ",
+      //     infoCard: " infor card ",
+      //   },
+      // ],
+      // dataFlagCountry: [
+      //   {
+      //     flagActive: true,
+      //     urlFlag: GermanImage,
+      //     nameFlag: "German",
+      //     telephoneNum: "+241",
+      //   },
+      //   {
+      //     flagActive: false,
+      //     urlFlag: VietnamImage,
+      //     nameFlag: "Viet Nam",
+      //     telephoneNum: "+84",
+      //   },
+      //   {
+      //     flagActive: true,
+      //     urlFlag: JapanImage,
+      //     nameFlag: "Japan",
+      //     telephoneNum: "+52",
+      //   },
+      //   {
+      //     flagActive: false,
+      //     urlFlag: AmericaImage,
+      //     nameFlag: "America",
+      //     telephoneNum: "+14",
+      //   },
+      // ],
+      // dataProductItem: [
+      //   {
+      //     urlProduct: ProductCoffe,
+      //     nameProduct: "Pinot Noir",
+      //     infoProduct:
+      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+      //     pricesProduct: "16.95",
+      //   },
+      //   {
+      //     urlProduct: ProductCoffe,
+      //     nameProduct: "Product 2",
+      //     infoProduct:
+      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+      //     pricesProduct: "17.95",
+      //   },
+      //   {
+      //     urlProduct: ProductCoffe,
+      //     nameProduct: "Product 3",
+      //     infoProduct:
+      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+      //     pricesProduct: "18.95",
+      //   },
+      //   {
+      //     urlProduct: ProductCoffe,
+      //     nameProduct: "Product 4",
+      //     infoProduct:
+      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+      //     pricesProduct: "19.95",
+      //   },
+      //   {
+      //     urlProduct: ProductCoffe,
+      //     nameProduct: "Product 5",
+      //     infoProduct:
+      //       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod architecto iusto assumenda neque saepe ipsam cum. In, modi itaque. ",
+      //     pricesProduct: "20.95",
+      //   },
+      // ],
+      // urlCard1: Image1,
+      // urlCard2: Image2,
+      // showProduct: true,
+      // showProduct2: true,
+      // activeComponent: "ProductOrder",
       // này hơi thừa nha em , với component chưa có css á ,ok , report đi e mai làm tiếp
-
       // urlFlag1: GermanImage,
       // urlFlag2: JapanImage,
       // urlFlag3: AmericaImage,
       // urlFlag4: VietnamImage,
     };
   },
-  components: { CardProduct, FlagCountry, ProductOrder, ProductForm },
+  components: { Navbar },
 };
 </script>
