@@ -21,11 +21,9 @@ export default {
     <nav class="navbar-menu">
       <ul class="navbar-menu-control">
         <li>
-            <router-link :to="{ name : 'homepage'}"> home</router-link> 
-            <!--  có vẻ nó chưa hiểu  -->
-           
-            
+          <router-link to="/"> Home Page</router-link>
         </li>
+
         <!-- trong vue định tuyến <router-link> thay cho thẻ a nha  to= " ở trong này là đường dẫn link " -->
         <!-- <li><a href="#">How it works</a></li>
         <li><a href="#">Explore</a>
