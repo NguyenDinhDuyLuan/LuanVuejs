@@ -25,14 +25,14 @@ export default {
         </li>
 
         <!-- trong vue định tuyến <router-link> thay cho thẻ a nha  to= " ở trong này là đường dẫn link " -->
-        <!-- <li><a href="#">How it works</a></li>
-        <li><a href="#">Explore</a>
+        <li><router-link to="/./"> About Page</router-link></li>
+        <li><router-link to="/././"> Explore Page</router-link>
             <ul class="dropdown">
                 <li><a href="#">Explore 1</a></li>
                 <li><a href="#">Explore 2</a></li>
             </ul>
         </li>
-        <li><a href="#">Impact</a></li> -->
+        <!--<li><a href="#">Impact</a></li> -->
       </ul>
     </nav>
     <div class="navbar-user">
