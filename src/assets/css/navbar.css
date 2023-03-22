@@ -114,3 +114,8 @@
     object-fit: cover;
     margin-left: 12px;
 }
+
+.router-link-active{
+    border-bottom: 2px solid #3E3E3E;
+}
+

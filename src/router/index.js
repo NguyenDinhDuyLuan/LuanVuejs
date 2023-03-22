@@ -11,12 +11,12 @@ const routes = [
     component: Home,
   },
   {
-    path: "/./",
+    path: "/about",
     name: "About",
     component: About,
   },
   {
-    path: "/././",
+    path: "/explore",
     name: "Explore",
     component: Explore,
   },
@@ -25,6 +25,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes: routes,
+  linkActiveClass: "router-link-active",
 });
 
 export default router;

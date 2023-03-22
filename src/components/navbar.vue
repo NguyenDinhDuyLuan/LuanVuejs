@@ -25,8 +25,8 @@ export default {
         </li>
 
         <!-- trong vue định tuyến <router-link> thay cho thẻ a nha  to= " ở trong này là đường dẫn link " -->
-        <li><router-link to="/./"> About Page</router-link></li>
-        <li><router-link to="/././"> Explore Page</router-link>
+        <li><router-link to="/about"> About Page</router-link></li>
+        <li><router-link to="/explore"> Explore Page</router-link>
             <ul class="dropdown">
                 <li><a href="#">Explore 1</a></li>
                 <li><a href="#">Explore 2</a></li>
