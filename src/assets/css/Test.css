@@ -59,7 +59,7 @@
 }
 
 .section-sidebar .content-wrapper .content-view{
-  width: 1430px;
+  width: 100%;
   height: 85px;
   border-bottom: 1px solid #F1F1F1;
   border-right: 1px solid #F1F1F1;
@@ -87,6 +87,11 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.section-add-form{
+  overflow-y: scroll;
+  height: 877px;
 }
 
 .v-enter-active,
