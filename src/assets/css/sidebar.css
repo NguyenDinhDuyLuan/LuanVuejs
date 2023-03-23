@@ -24,6 +24,7 @@
 
 .sub-sidebar .sidebar-menu{
     margin-top: 24px;
+    padding: 0 32px;
 }
 
 .sub-sidebar .sidebar-menu li{
@@ -63,9 +64,9 @@
     display: flex;
     justify-content: center;
 }
-.sub-sidebar .calender-wrapper .calender-btn{
-    height: 44px;
-    width: 275px;
+
+.router-link-active{
+    padding: 5px 20px;
     background-color: #FFF2D9;
     color: #FFB21D;
     font-size: 16px;

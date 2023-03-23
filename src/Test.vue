@@ -9,19 +9,17 @@
     </div>
     <router-view /> -->
     <div class="section-sidebar">
-      <div class="container">
-        <div class="content-wrapper">
-          <Sidebar />
-          <div class="content-view">
-            <div class="user-info">
-              <h3>Hello Admin,</h3>
-              <div class="user-avatar">
-                <img src="./assets/img/fujiMout.jpg" />
-              </div>
+      <div class="content-wrapper">
+        <Sidebar />
+        <div class="content-view">
+          <div class="user-info">
+            <h3>Hello Admin,</h3>
+            <div class="user-avatar">
+              <img src="./assets/img/fujiMout.jpg" />
             </div>
-            <div class="content-display">
-              <router-view />
-            </div>
+          </div>
+          <div class="content-display">
+            <router-view />
           </div>
         </div>
       </div>

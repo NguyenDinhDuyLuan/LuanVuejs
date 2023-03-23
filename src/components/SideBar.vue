@@ -18,18 +18,25 @@ export default {
       </li>
       <li>
         <ul>
-          <li class="sub-item">
-            <div class="img-contain">
-              <img src="../assets/img/dashboard.png" />
-            </div>
-            <router-link to="/explore">Dashboard</router-link>
+          <li>
+            <router-link to="/explore" class="sub-item">
+              <div class="img-contain">
+                <img src="../assets/img/dashboard.png" />
+              </div>
+              Dashboard</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/" class="sub-item">
+              <div class="img-contain">
+                <img src="../assets/img/calendar.png" />
+              </div>
+              Calender management</router-link
+            >
           </li>
         </ul>
       </li>
     </ul>
-    <div class="calender-wrapper">
-      <button class="calender-btn">Calender management</button>
-    </div>
   </div>
 </template>
 
