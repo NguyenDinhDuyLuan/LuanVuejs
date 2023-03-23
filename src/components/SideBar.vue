@@ -7,32 +7,28 @@ export default {
 </script>
 <template>
   <div class="sub-sidebar">
-    <div class="top-content">
-      <div class="left-info">
-        <a class="sidebar-logo">
-          <img src="../assets/img/pachama.png" />
-        </a>
-      </div>
-      <div class="right-info">
-        <div class="user-info">
-          <h3>Hello Admin,</h3>
-          <div class="user-avatar">
-            <img src="../assets/img/fujiMout.jpg" />
-          </div>
-        </div>
-      </div>
+    <div class="top-logo">
+      <a class="sidebar-logo">
+        <img src="../assets/img/pachama.png" />
+      </a>
     </div>
-    <div class="bottom-content">
-      <div class="left-sidebar">
+    <ul class="sidebar-menu">
+      <li class="main-item">
+        <router-link to="/about">Management</router-link>
+      </li>
+      <li>
         <ul>
-          <li><router-link to="/">Management</router-link></li>
-          <li><router-link to="/about">Dash Board</router-link></li>
-          <li><router-link to="/Explore">Calender Management</router-link></li>
+          <li class="sub-item">
+            <div class="img-contain">
+              <img src="../assets/img/dashboard.png" />
+            </div>
+            <router-link to="/explore">Dashboard</router-link>
+          </li>
         </ul>
-      </div>
-      <div class="right-content">
-        <router-view />
-      </div>
+      </li>
+    </ul>
+    <div class="calender-wrapper">
+      <button class="calender-btn">Calender management</button>
     </div>
   </div>
 </template>
