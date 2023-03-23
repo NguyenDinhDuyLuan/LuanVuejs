@@ -68,7 +68,7 @@
 .router-link-active{
     padding: 5px 20px;
     background-color: #FFF2D9;
-    color: #FFB21D;
+    color: #FFB21D!important; 
     font-size: 16px;
     border: none;
     border-radius: 8px;
