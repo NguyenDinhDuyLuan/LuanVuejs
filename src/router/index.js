@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../view/HomePage.vue";
 import About from "../view/AboutPage.vue";
 import Explore from "../view/ExplorePage.vue";
+import Modal from "../view/ModalPage.vue";
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     path: "/explore",
     name: "Explore",
     component: Explore,
+  },
+  {
+    path: "/modal",
+    name: "Modal",
+    component: Modal,
   },
 ];
 

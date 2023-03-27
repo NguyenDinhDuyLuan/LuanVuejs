@@ -34,6 +34,14 @@ export default {
               Calender management</router-link
             >
           </li>
+          <li>
+            <router-link to="/modal" class="sub-item">
+              <div class="img-contain">
+                <img src="../assets/img/pachama.png" />
+              </div>
+              Modal Vue</router-link
+            >
+          </li>
         </ul>
       </li>
     </ul>
