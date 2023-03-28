@@ -42,6 +42,14 @@ export default {
               Modal Vue</router-link
             >
           </li>
+          <li>
+            <router-link to="/slot" class="sub-item">
+              <div class="img-contain">
+                <img src="../assets/img/shopping-cart-icon.svg" />
+              </div>
+              Slot Vue</router-link
+            >
+          </li>
         </ul>
       </li>
     </ul>

@@ -1,0 +1,7 @@
+.slot-btn{
+    width: 140px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background: radial-gradient(circle at bottom center, #FFC837 15px, #FF8008);
+}
