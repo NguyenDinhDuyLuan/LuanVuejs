@@ -50,6 +50,14 @@ export default {
               Slot Vue</router-link
             >
           </li>
+          <li>
+            <router-link to="/slotModal" class="sub-item">
+              <div class="img-contain">
+                <img src="../assets/img/calendar.png" />
+              </div>
+              Slot Modal</router-link
+            >
+          </li>
         </ul>
       </li>
     </ul>

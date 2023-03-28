@@ -5,6 +5,7 @@ import About from "../view/AboutPage.vue";
 import Explore from "../view/ExplorePage.vue";
 import Modal from "../view/ModalPage.vue";
 import SlotExample from "../view/SlotPage.vue";
+import SlotModal from "../view/SlotModalPage.vue";
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
     path: "/slot",
     name: "Slot",
     component: SlotExample,
+  },
+  {
+    path: "/slotModal",
+    name: "SlotModal",
+    component: SlotModal,
   },
 ];
 
