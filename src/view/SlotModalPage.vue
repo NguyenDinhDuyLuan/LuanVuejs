@@ -6,10 +6,21 @@
         <!--  gọi sự kiện để gọi modal show data lên  -->
       </b-button>
       <!--  khúc naỳ nằm ở đây  -->
-      <SlotModal>
-        <!--  đổ data vào đây theo slot nha em -->
-        <!--   -->
-      </SlotModal>
+      <b-modal v-model="modalCard" id="modal-xl" size="xl">
+        <SlotModal>
+          <template #header>
+            <h1>Card Title</h1>
+          </template>
+
+          <template #body>
+            <p>Card detail</p>
+          </template>
+
+          <template #footer>
+            <p>Last updated 3 mins ago</p>
+          </template>
+        </SlotModal>
+      </b-modal>
     </div>
   </div>
 </template>
@@ -18,7 +29,7 @@
 import SlotModal from "../components/SlotModal.vue";
 export default {
   data() {
-    return {};
+    return { modalCard: false };
   },
   components: { SlotModal },
 };
