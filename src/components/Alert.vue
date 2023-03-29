@@ -1,34 +1,63 @@
 <template>
-  <div>
-    <b-alert v-model="showSuccessAlert" variant="success" show dismissible
-      ><b-icon icon="exclamation-circle-fill"></b-icon> A successful
-      toast.</b-alert
-    >
-
-    <b-alert v-model="showDefaultAlert" show dismissible>
-      An information toast.<b>&rArr;</b>
-    </b-alert>
-
-    <b-alert v-model="showWarningAlert" variant="warning" dismissible>
-      A destructive toast.
-    </b-alert>
-
-    <b-alert v-model="showDangerAlert" variant="danger" dismissible>
-      A warning toast.
-    </b-alert>
-
-    <b-button @click="showSuccessAlert = true" variant="info" class="m-1">
-      Show dismissible alert ({{ showSuccessAlert ? "visible" : "hidden" }})
-    </b-button>
-    <b-button @click="showDefaultAlert = true" variant="info" class="m-1">
-      Show dismissible alert ({{ showDefaultAlert ? "visible" : "hidden" }})
-    </b-button>
-    <b-button @click="showWarningAlert = true" variant="info" class="m-1">
-      Show dismissible alert ({{ showWarningAlert ? "visible" : "hidden" }})
-    </b-button>
-    <b-button @click="showDangerAlert = true" variant="info" class="m-1">
-      Show dismissible alert ({{ showDangerAlert ? "visible" : "hidden" }})
-    </b-button>
+  <div class="section-alert">
+    <div class="alert-wrapper">
+      <div class="alert-box success-alert" :v-model="showSuccessAlert">
+        <div class="alert-icon success-icon">
+          <div class="icon-control">
+            <font-awesome-icon
+              :icon="['fas', 'circle-check']"
+              size="4x"
+              style="color: white"
+            />
+          </div>
+        </div>
+        <h3>A successful toast</h3>
+        <button class="alert-close" @click="showSuccessAlert=false"><font-awesome-icon :icon="['fas', 'xmark']" size="2x" style="color: #747E89" /></button>
+      </div>
+      <div class="alert-box information-alert">
+        <div class="alert-icon information-icon">
+          <div class="icon-control">
+            <font-awesome-icon
+              :icon="['fas', 'circle-info']"
+              size="4x"
+              style="color: white"
+            />
+          </div>
+        </div>
+        <h3>An information toast</h3>
+        <button class="alert-close"><font-awesome-icon :icon="['fas', 'xmark']" size="2x" style="color: #747E89" /></button>
+      </div>
+      <div class="alert-box warning-alert">
+        <div class="alert-icon warning-icon">
+          <div class="icon-control">
+            <font-awesome-icon
+              :icon="['fas', 'triangle-exclamation']"
+              size="4x"
+              style="color: white"
+            />
+          </div>
+          <!--  vô rôì nè, e thử mấy con icon khác xem , chọn mục free nha  -->
+        </div>
+        <h3>A warning toast</h3>
+        <button class="alert-close"><font-awesome-icon :icon="['fas', 'xmark']" size="2x" style="color: #747E89" /></button>
+      </div>
+      <div class="alert-box destructive-alert">
+        <div class="alert-icon destructive-icon">
+          <div class="icon-control">
+            <font-awesome-icon
+              :icon="['fas', 'triangle-exclamation']"
+              size="4x"
+              style="color: white"
+            />
+          </div>
+        </div>
+        <h3>A destructive toast</h3>
+        <button class="alert-close"><font-awesome-icon :icon="['fas', 'xmark']" size="2x" style="color: #747E89" /></button>
+      </div>
+    </div>
+    <div class="alert-btn">
+        <button @click="showSuccessAlert=true">Success Button</button>
+    </div>
   </div>
 </template>
 
@@ -36,10 +65,10 @@
 export default {
   data() {
     return {
-      showSuccessAlert: false,
-      showDefaultAlert: false,
-      showWarningAlert: false,
-      showDangerAlert: false,
+        showSuccessAlert: false,
+        showDefaultAlert: false,
+        showWarningAlert: false,
+        showDangerAlert: false,
     };
   },
 };
