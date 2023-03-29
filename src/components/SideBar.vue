@@ -58,6 +58,14 @@ export default {
               Slot Modal</router-link
             >
           </li>
+          <li>
+            <router-link to="/alert" class="sub-item">
+              <div class="img-contain">
+                <img src="../assets/img/notification.png" />
+              </div>
+              Alert</router-link
+            >
+          </li>
         </ul>
       </li>
     </ul>
