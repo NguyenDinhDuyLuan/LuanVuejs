@@ -1,6 +1,13 @@
 <template>
   <div class="outer">
-    <AlertBtn />
+    <!--  button gọi sự kiện  -->
+     <div class="alert-btn">
+      <button @click="showAlert = !showAlert == true">Success Button</button>
+     
+    </div>
+    
+    <!--  1 component có các yếu tố sau : - biến để đổ đata vào [bắt buộc có ] - sự kiện để có thể gọi component [có thể có hoặc không] -->
+    <AlertBtn  status="success" :showSuccessAlert= 'showAlert' />
   </div>
 </template>
 
@@ -9,7 +16,7 @@ import AlertBtn from "../components/Alert.vue";
 export default {
   data() {
     return {
-      showSuccessAlert: false,
+      showAlert: false,
       showDefaultAlert: false,
       showWarningAlert: false,
       showDangerAlert: false,
