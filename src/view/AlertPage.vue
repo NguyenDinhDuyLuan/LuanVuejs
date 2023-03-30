@@ -8,7 +8,12 @@
 import AlertBtn from "../components/Alert.vue";
 export default {
   data() {
-    return {};
+    return {
+      showSuccessAlert: false,
+      showDefaultAlert: false,
+      showWarningAlert: false,
+      showDangerAlert: false,
+    };
   },
   components: { AlertBtn },
 };
