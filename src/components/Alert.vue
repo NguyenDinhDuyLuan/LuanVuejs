@@ -95,9 +95,10 @@
        1, icon, màu thay đổi >>> chúng ta sử dụng check điều kiện [v-if]] và v-biding class để thay đổi  -->
     <!-- tạo ra 1 class mang 1 khung alert chung [ alert-box] , check điều kiện nếu status === 'susccess '
          thì add thêm classname "success" -->
-    <div v-show="showSuccessAlert "
+    <div
+      v-show="showAlert"
       :class="[
-        'alert-box',
+        'alert-box', alertClassBox,
         {
           success: status === 'success',
         },
@@ -113,22 +114,22 @@
       ]"
     >
       <!-- tương tự em sửa lại class name hiển thị tương ứng nhé  -->
-      <div class="alert-icon success-icon">
+      <div class="alert-icon" :class="alertClassIcon">
         <div class="icon-control">
           <!-- tương tự em add thêm icon theo từng điều kiện nha , 
               chỗ icon này mở rộng linh hoạt còn có thể cho người dùng truyền vào nữa nha,
          -->
           <font-awesome-icon
-            v-if="status === 'success'"
-            :icon="['fas', 'circle-check']"
+            v-if="status === alertStatus"
+            :icon="['fas', alertIcon]"
             size="4x"
             style="color: white"
           />
         </div>
       </div>
       <!--  dòng này em cần cho người dùng truyền data vào nha,  -->
-      <!-- <h3>A successful toast</h3>  -->
-      <button class="alert-close" @click="showSuccessAlert = false">
+      <h3>{{ alertInfo }}</h3> 
+      <button class="alert-close" @click="showAlert = false">
         <font-awesome-icon
           :icon="['fas', 'xmark']"
           size="2x"
@@ -143,6 +144,21 @@
 export default {
   //  còn thiếu data đổ voà nữa nha
   props: {
+    alertInfo: {
+      type: String,
+    },
+    alertIcon: {
+      type: String,
+    },
+    alertStatus: {
+      type: String,
+    },
+    alertClassIcon: {
+      type: String,
+    },
+    alertClassBox: {
+      type: String,
+    },
     status: {
       theme: {
         type: String,
@@ -152,15 +168,15 @@ export default {
         },
       },
     },
-    showSuccessAlert: {
+    showAlert: {
       type: Boolean,
       default: false
     },
   },
   data() {
     return {
-     
-      
+
+
     };
   },
   methods: {},
