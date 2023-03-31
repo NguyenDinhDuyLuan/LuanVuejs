@@ -44,36 +44,37 @@
     background-color: #35BE5E;
 }
 
- .information-alert{
+ .infor{
     border: 2px solid #BED1E4;
     background-color: #E9F1FB;
 }
 
- .information-alert .information-icon{
+ .infor .information-icon{
     background-color: #0077EC;
 }
 
- .warning-alert{
+ .warnning{
     border: 2px solid #F7E2BB;
     background-color: #FEF8EC;
 }
 
- .warning-alert .warning-icon{
+ .warnning .warning-icon{
     background-color: #F29E00;
 }
 
- .destructive-alert{
+ .fails{
     border: 2px solid #EED0C9;
     background-color: #FDEFEB;
 }
 
- .destructive-alert .destructive-icon{
+ .fails .destructive-icon{
     background-color: #F35525;
 }
 
  .alert-box h3{
     font-size: 46px;
     font-weight: 400;
+    
 }
 
  .alert-box .alert-close{
