@@ -20,22 +20,22 @@
     <AlertBtn
       status="success"
       :showAlert="showAlertOn"
-      alertInfo="Thành công"
+      alertInfo="A successful toast."
     ></AlertBtn>
     <AlertBtn
       status="warnning"
       :showAlert="showAlertOnWarnning"
-      alertInfo="cảnh báo "
+      alertInfo="An warning toast."
     ></AlertBtn>
     <AlertBtn
       status="infor"
       :showAlert="showAlertOnInfor"
-      alertInfo="Info "
+      alertInfo="An information toast."
     ></AlertBtn>
     <AlertBtn
       status="fails"
       :showAlert="showAlertOnFaisl"
-      alertInfo="Thất bại  "
+      alertInfo="A destructive toast."
     ></AlertBtn>
   </div>
 </template>

@@ -5,13 +5,23 @@
 
  .alert-box{
     padding: 14px;
-    width: 100%;
+    max-width: fit-content;
     height: 122px;
     border-radius: 31px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 66px 0 66px 0;
+}
+
+.left-content{
+    display: flex;
+    align-items: center;
+}
+
+.left-content h3{
+    margin-left: 42px;
+    margin-right: 152px;
 }
 
  .alert-box:first-child{

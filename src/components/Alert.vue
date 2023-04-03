@@ -1,6 +1,5 @@
 <template>
   <div class="section-alert">
-  
     <!-- các bước tạo ra 1 component :
        1, hiển thị giao diện, 
        2, có thể dùng lại ở nhiều giao diện khác nhau thể hiện qua biến đổ data ,
@@ -28,52 +27,51 @@
         },
       ]"
     >
-      <!-- tương tự em sửa lại class name hiển thị tương ứng nhé  -->
-      <div class="alert-icon success-icon" v-if="status === 'success'">
-        <div class="icon-control">
-          <!-- tương tự em add thêm icon theo từng điều kiện nha , 
+      <div class="left-content">
+        <!-- tương tự em sửa lại class name hiển thị tương ứng nhé  -->
+        <div class="alert-icon success-icon" v-if="status === 'success'">
+          <div class="icon-control">
+            <!-- tương tự em add thêm icon theo từng điều kiện nha , 
               chỗ icon này mở rộng linh hoạt còn có thể cho người dùng truyền vào nữa nha,
          -->
-          <font-awesome-icon
-            :icon="['fas', 'circle-check']"
-            size="4x"
-            style="color: white"
-          />
+            <font-awesome-icon
+              :icon="['fas', 'circle-check']"
+              size="4x"
+              style="color: white"
+            />
+          </div>
         </div>
-      </div>
-      <div class="alert-icon information-icon" v-if="status === 'infor'">
-        <div class="icon-control">
-         
-          <font-awesome-icon
-            :icon="['fas', 'circle-info']"
-            size="4x"
-            style="color: white"
-          />
+        <div class="alert-icon information-icon" v-if="status === 'infor'">
+          <div class="icon-control">
+            <font-awesome-icon
+              :icon="['fas', 'circle-info']"
+              size="4x"
+              style="color: white"
+            />
+          </div>
         </div>
-      </div>
-      <div class="alert-icon warning-icon" v-if="status === 'warnning'">
-        <div class="icon-control">
-         
-          <font-awesome-icon
-            :icon="['fas', 'triangle-exclamation']"
-            size="4x"
-            style="color: white"
-          />
+        <div class="alert-icon warning-icon" v-if="status === 'warnning'">
+          <div class="icon-control">
+            <font-awesome-icon
+              :icon="['fas', 'triangle-exclamation']"
+              size="4x"
+              style="color: white"
+            />
+          </div>
         </div>
-      </div>
-      <div class="alert-icon destructive-icon" v-if="status === 'fails'">
-        <div class="icon-control">
-         
-          <font-awesome-icon
-            :icon="['fas', 'triangle-exclamation']"
-            size="4x"
-            style="color: white"
-          />
+        <div class="alert-icon destructive-icon" v-if="status === 'fails'">
+          <div class="icon-control">
+            <font-awesome-icon
+              :icon="['fas', 'triangle-exclamation']"
+              size="4x"
+              style="color: white"
+            />
+          </div>
         </div>
-      </div>
 
-      <!--  dòng này em cần cho người dùng truyền data vào nha,  -->
-      <h3>{{ alertInfo }}</h3>
+        <!--  dòng này em cần cho người dùng truyền data vào nha,  -->
+        <h3>{{ alertInfo }}</h3>
+      </div>
       <button class="alert-close" @click="showAlert = false">
         <font-awesome-icon
           :icon="['fas', 'xmark']"
