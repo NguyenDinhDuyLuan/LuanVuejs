@@ -226,19 +226,19 @@ export default {
       this.nameState = null;
     },
     handleOk(bvModalEvent) {
-      // Prevent modal from closing
+      // Ngăn không cho modal đóng
       bvModalEvent.preventDefault();
       // Trigger submit handler
       this.handleSubmit();
     },
     handleSubmit() {
-      // Exit when the form isn't valid
+      // Thoát khi form không đúng
       if (!this.checkFormValidity()) {
         return;
       }
       // Push the name to submitted names
       this.submittedNames.push(this.name);
-      // Hide the modal manually
+      // Ẩn modal
       this.$nextTick(() => {
         this.$bvModal.hide("modal-prevent-closing");
       });

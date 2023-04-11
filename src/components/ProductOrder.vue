@@ -38,6 +38,7 @@ export default {
 <template>
   <div class="product-items" id="productItems">
     <div class="option-menu">
+      <!-- Tạo event hiển thị thông báo khi nhấn nút quat trờ về -->
       <button
         class="back-btn"
         @click="

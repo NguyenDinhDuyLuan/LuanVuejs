@@ -2,26 +2,22 @@
 import image from "../assets/img/card-image.jpg";
 
 export default {
+  //Khai báo các biến props đế lấy dữ liệu truyền vào
   props: {
+    // Dữ liệu của ảnh sản phẩm
     urlCard: {
       type: String,
     },
+    // Dữ liệu tên của card
     titleCard: {
       type: String,
     },
+    // Dữ liệu thông tin card
     infoCard: {
       type: String,
     },
     linkCard: {
       type: String,
-    },
-    classCardRed: {
-      type: Boolean,
-      default: false,
-    },
-    classCardBlue: {
-      type: Boolean,
-      default: false,
     },
     isActive: {
       type: Boolean,
@@ -49,6 +45,7 @@ export default {
 </script>
 
 <template>
+  <!-- Nếu dữ liệu truyền vô isActive bằng true thì thay đổi style của component -->
   <a
     :class="[isActive ? 'classCardYellow' : 'classCardBlue']"
     class="card-item"

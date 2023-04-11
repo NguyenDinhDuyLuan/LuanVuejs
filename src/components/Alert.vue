@@ -28,12 +28,10 @@
       ]"
     >
       <div class="left-content">
-        <!-- tương tự em sửa lại class name hiển thị tương ứng nhé  -->
         <div class="alert-icon success-icon" v-if="status === 'success'">
           <div class="icon-control">
-            <!-- tương tự em add thêm icon theo từng điều kiện nha , 
-              chỗ icon này mở rộng linh hoạt còn có thể cho người dùng truyền vào nữa nha,
-         -->
+            <!-- add icon theo từng điều kiện -->
+            <!-- Icon cho alert success -->
             <font-awesome-icon
               :icon="['fas', 'circle-check']"
               size="4x"
@@ -43,6 +41,7 @@
         </div>
         <div class="alert-icon information-icon" v-if="status === 'infor'">
           <div class="icon-control">
+             <!-- Icon cho alert information -->
             <font-awesome-icon
               :icon="['fas', 'circle-info']"
               size="4x"
@@ -69,7 +68,7 @@
           </div>
         </div>
 
-        <!--  dòng này em cần cho người dùng truyền data vào nha,  -->
+        <!--  người dùng truyền data vào  -->
         <h3>{{ alertInfo }}</h3>
       </div>
       <button class="alert-close" @click="showAlert = false">
@@ -85,7 +84,6 @@
 
 <script>
 export default {
-  //  còn thiếu data đổ voà nữa nha
   props: {
     status: {
       theme: {

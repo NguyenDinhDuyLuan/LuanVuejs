@@ -19,6 +19,23 @@ export default {
       <li>
         <ul>
           <li>
+            <!-- Sử dụng router-link để chèn đường dẫn tạo ra ở index.js -->
+            <router-link to="/card" class="sub-item">
+              <div class="img-contain">
+                <img src="../assets/img/shopping-cart-icon.svg" />
+              </div>
+              Card List</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/flag" class="sub-item">
+              <div class="img-contain">
+                <img src="../assets/img/german-flag.png" />
+              </div>
+              Flag list</router-link
+            >
+          </li>
+          <li>
             <router-link to="/explore" class="sub-item">
               <div class="img-contain">
                 <img src="../assets/img/dashboard.png" />

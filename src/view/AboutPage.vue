@@ -4,7 +4,9 @@
       <div class="container">
         <div class="product-list">
           <div v-for="item in dataProductItem">
+            <!-- Sử dụng transition để thêm animation ẩn hiện cho component -->
             <Transition>
+              <!-- Nếu showProduct === true thì hiện component -->
               <div v-if="showProduct">
                 <ProductOrder
                   :urlProduct="item.urlProduct"
@@ -16,6 +18,7 @@
             </Transition>
           </div>
         </div>
+        <!-- Tạo event nhấn để thay đổi trạng thái showProduct -->
         <button class="hide-btn" @click="showProduct = !showProduct">
           Hide/show
         </button>
@@ -31,7 +34,9 @@ import ProductImage2 from "../assets/img/coffe-3.jpg";
 export default {
   data() {
     return {
+      // khai báo trạng thái showProduct
       showProduct: true,
+      // Khai báo dữ liệu của Product
       dataProductItem: [
         {
           urlProduct: ProductImage1,

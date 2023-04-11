@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      // Khai báo các biến cho input và label.
       productName: '',
       productAmount: 0,
       codeProduct: "",
@@ -39,6 +40,7 @@ export default {
       <br />
       <select v-model="codeProduct" class="code-selector">
         <option disabled value="">Default Select</option>
+        <!-- Sử dụng v-for để lấy dữ liệu từ dataCheckbox và truyền vào option -->
         <option v-for="option in dataCheckbox" :value="option">{{option}}</option>
       </select>
     </div>
